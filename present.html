@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Computer Vision Overview</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -33,6 +33,55 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+        <style type="text/css">
+            .reveal h1 {
+                font-size: larger;
+            }
+
+            .reveal h2 {
+                font-size: smaller;
+                text-transform: none;
+            }
+
+            div.block {
+                border: 1px solid white;
+                border-radius: 10px;
+                margin: 10px;
+                display: inline-block;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: rgba(0,0,0, 0.2);
+
+            }
+            .reveal blockquote {
+                width: 100%;
+            }
+
+            .reveal blockquote span.author {
+                position: relative;
+                display: block;
+                font-size: smaller;
+                text-align: right;
+                margin-top: 5px;
+                color: #999;
+
+                i {
+                    position: relative;
+                    background: #eee;
+                    padding-left: 5px;
+                    font-style: italic;
+                    z-index: 5;
+                }
+            }
+
+            a.note {
+                font-size: 20%;
+                display: block;
+            }
+
+
+        </style>
 	</head>
 
 	<body>
@@ -41,31 +90,298 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+                <section>
+                    Introduce myself
+                </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                <section>
+                    <h1>The Topic</h1>
+                    <ul>
+                        <li>What is Computer Vision (CV)</li>
+                        <li>What problems it solves</li>
+                        <li>How it is being solved</li>
+                        <li>Use cases</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>What is Computer Vision?</h1>
+                    <blockquote>
+                      Computer vision is the automated extraction of information from images. Information can mean anything from 3D models, camera position, object detection and recognition to grouping and searching image content.
+                      <span class="author"><i><a href="https://amzn.to/2QKTaAL">Page ix, Programming Computer Vision with Python, 2012.</a></i></span>
+                    </blockquote>
+                </section>
+
+                <section>
+                    <section>
+                    <h1>What is needed for?</h1>
+                    <p>Just for fun.</p>
+                    </section>
+
+                    <section>
+                        <blockquote>
+                          The goal of computer vision is to understand the content of digital images. Typically, this involves developing methods that attempt to reproduce the capability of human vision.
+                          <span class="author"><i><a href="https://machinelearningmastery.com/what-is-computer-vision/">Gentle introduction to CV</a></i></span>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h1>Small Example: Image Captioning</h1>
+                        <img src="images/surf.jpg">
+                    </section>
+                    <section>
+                        <img src="images/imcap_prediction.png">
+                        <a href="https://www.tensorflow.org/tutorials/text/image_captioning">Images source</a>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>What is Computer Vision part of?</h1>
+                    <img src="images/Computer-Vision.png">
+                </section>
+
+<!--                 <section>
+                    <h1>Computer Vision vs Image Processing</h1>
+                    <ul>
+                        <li>Computer Vision: extract metadata from the image</li>
+                        <li>Image Processing: transform the image</li>
+                        <li>Machine Vision: both together combined with automated controls</li>
+                    </ul>
+                </section> -->
+
+                <section>
+                    <h1>CV vs CO</h1>
+                    <blockquote>
+                      Extract metadata from the image.
+                      <span class="author"><i>Computer Vision</i></span>
+                    </blockquote>
+                    <blockquote>
+                      Transform the image.
+                      <span class="author"><i>Image Processing</i></span>
+                    </blockquote>
+                    <blockquote>
+                      Both together combined with automated controls.
+                      <span class="author"><i>Machine Vision</i></span>
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h1>Examples of image processing</h1>
+                    <blockquote>
+                      Normalizing photometric properties of the image, such as brightness or color.
+                    </blockquote>
+                    <blockquote>
+                      Cropping the bounds of the image, such as centering an object in a photograph.
+                    </blockquote>
+                    <blockquote>
+                      Removing digital noise from an image, such as digital artifacts from low light levels.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <section><h1>Computer vision tasks</h1></section>
+                    <!-- Maybe quickly put bullets here? -->
+
+                    <section>
+                    <blockquote>What broad category of object is in this photograph?
+                    <span class="author"><i>Object Classification</i></span>
+                    </blockquote>
+                    </section>
+
+                    <section>
+                    <blockquote>Which type of a given object is in this photograph?
+                    <span class="author"><i>Object Identification</i></span>
+                    </blockquote>
+                    </section>
+
+                    <section><blockquote>Object Verification
+                                        <span class="author"><i>Is the object in the photograph?</i></span>
+                                        </blockquote></section>
+
+                    <section><blockquote>Object Detection
+                                        <span class="author"><i>Where are the objects in the photograph?</i></span>
+                                        </blockquote></section>
+                    <section><blockquote>What are the key points for the object in the photograph?
+                                        <span class="author"><i>Object Landmark Detection</i></span>
+                                        </blockquote></section>
+                    <section><blockquote>What pixels belong to the object in the image?
+                                        <span class="author"><i>Object Segmentation</i></span>
+                                        </blockquote></section>
+                    <section><blockquote>What objects are in this photograph and where are they?
+                                        <span class="author"><i>Object Recognition</i></span>
+                                        </blockquote></section>
+                </section>
+
+                <section>
+                    <h1>Computer Vision Pipeline</h1>
+                    <img src="images/cv_pipeline.png">
+                </section>
+
+                <section>
+                    <h1>Related Fields</h1>
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Information engineering</li>
+                        <li>Solid-state physics</li>
+                        <li>Neurobiology</li>
+                        <li>Signal processing</li>
+                        <li>And more</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Image Data</h1>
+                        The image data can take many forms, such as video sequences, views from multiple cameras, or multidimensional data from a medical scanner.
+                    </section>
+
+                    <section>
+                        <h1>RGB Image</h1>
+                        <img class="stretch" src="images/cute-cat-captions-1563551865.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Image sequence</h1>
+                        <h2>Video</h2>
+                        <img src="images/image_data_video.gif">
+                    </section>
+
+                    <section>
+                        <h1>360 shot</h1>
+                        <h2>Google Street View or similar</h2>
+                        <img src="images/360Level43Lounge-8K-stable-noaudio-1024x512.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Infrared satellite images</h1>
+                        <img class="stretch" src="images/infraredBansi.png">
+                    </section>
+
+                    <section>
+                        <h1>Thermal Vision</h1>
+                        <img src="images/deermanagement-main.png">
+                    </section>
+
+                    <section>
+                        <h1>Tomography Scans</h1>
+                        <img class="stretch" src="images/brain-scans-oc-blue.jpg__1066x0_q85_subsampling-2_upscale.jpg">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>History of Computer Vision</h1>
+                    </section>
+                    <section>
+                        <h1>1960s: The Beginning</h1>
+                    </section>
+                    <section>
+                        <h1>1970s: Foundation</h1>
+                    </section>
+                    <section>
+                        <h1>Lenna</h1>
+                        <img src="images/440px-Lenna_(test_image).png">
+                    </section>
+                    <section>
+                        <h1>1980s: Getting Mathy</h1>
+                    </section>
+                    <section>
+                        <h1>1990s: Going 3D</h1>
+                    </section>
+                    <section>
+                        <h1>2000s: Object Detection</h1>
+                    </section>
+                    <section>
+                        <h1>2010s: Deep Learning</h1>
+                    </section>
+                    <section>
+                        <h1>Nowadays</h1>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Use Cases</h1>
+                    </section>
+
+                    <section>
+                        <h1>Optical character recognition (OCR)</h1>
+                        <img src="images/1_VAjYygFUinnygIx9eVCrQQ.png">
+                    </section>
+
+                    <section>
+                        <h1>Machine inspection</h1>
+                        <img src="images/fig_1_02.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Retail</h1>
+                        <h2>Automated checkouts</h2>
+                        <img src="images/maxresdefault.jpg">
+                    </section>
+
+                    <section>
+                        <h1>3D model building</h1>
+                        <h2>Photogrammetry</h2>
+                        <img src="images/sketchfab-1125x511.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Medical imaging</h1>
+                        <img src="images/maxresdefault_2.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Automotive safety</h1>
+                        <h2>ADAS</h2>
+                        <img src="images/unnamed.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Match move</h1>
+                        <h2>merging CGI with live actors in movies</h2>
+                        <img src="images/main-qimg-13efa6e36765798717468e14f30df077.png">
+                    </section>
+
+                    <section>
+                        <h1>Motion capture (mocap)</h1>
+                        <img class="stretch" src="images/dae9e8230081b098066f35d045399f9f2b006017r1-552-787v2_uhq.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Surveillance</h1>
+                        <img src="images/maxresdefault_3.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Fingerprint recognition and biometrics</h1>
+                        <img src="images/Fingerprints-features.jpg">
+                    </section>
+
+                    <section>
+                        <h1>Tesla Autopilot</h1>
+                        <img class="stretch" src="images/tesla.png">
+                        <a target="_blank" href="https://www.tesla.com/autopilot?redirect=no">Video</a>
+                    </section>
+
+                    <section>
+                        <h1>Amazon Go</h1>
+                        <img class="stretch" src="images/amazon-go-badge.png">
+                    </section>
+
+
+                </section>
+
+                <section>
+                    A Gentle Introduction to Computer Vision
+                    Huge Presentation
+                    Wikipedia: Computer Vision
+                    Wikipedia: Outline of Computer Vision
+                    Computer Vision: Overview of a Cutting Edge AI Technology
+                </section>
+
+                <section>
+                    <h1>Cheers!</h1>
+                </section>
 
 			</div>
 
