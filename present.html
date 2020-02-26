@@ -80,7 +80,16 @@
                 display: block;
             }
 
-
+            div.block {
+                border: 1px solid white;
+                border-radius: 10px;
+                margin: 10px;
+                display: inline-block;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: rgba(0,0,0, 0.2);
+            }
         </style>
 	</head>
 
@@ -91,7 +100,19 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
                 <section>
-                    Introduce myself
+                    <h1>Computer Vision</h1>
+                    <hr>
+                    <h2>Overview</h2>
+                </section>
+
+                <section>
+                    <div class="block">C++</div>
+                    <div class="block">Data Science</div>
+                    <div class="block">Leading/Mentoring</div>
+                    <hr>
+                    <div class="block">Drawing</div>
+                    <div class="block">Khan Academy</div>
+                    <div class="block">Driving</div>
                 </section>
 
                 <section>
@@ -135,8 +156,20 @@
                 </section>
 
                 <section>
-                    <h1>What is Computer Vision part of?</h1>
+                    <h1>Context of computer vision as a field</h1>
                     <img src="images/Computer-Vision.png">
+                </section>
+
+                <section>
+                    <h1>Related Fields</h1>
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Information engineering</li>
+                        <li>Solid-state physics</li>
+                        <li>Neurobiology</li>
+                        <li>Signal processing</li>
+                        <li>And more</li>
+                    </ul>
                 </section>
 
 <!--                 <section>
@@ -217,18 +250,6 @@
                 </section>
 
                 <section>
-                    <h1>Related Fields</h1>
-                    <ul>
-                        <li>Artificial Intelligence</li>
-                        <li>Information engineering</li>
-                        <li>Solid-state physics</li>
-                        <li>Neurobiology</li>
-                        <li>Signal processing</li>
-                        <li>And more</li>
-                    </ul>
-                </section>
-
-                <section>
                     <section>
                         <h1>Image Data</h1>
                         The image data can take many forms, such as video sequences, views from multiple cameras, or multidimensional data from a medical scanner.
@@ -267,34 +288,89 @@
                     </section>
                 </section>
 
+                <style type="text/css">
+                    table, th, td {
+                      border: 1px solid black;
+                    }
+                </style>
+
                 <section>
                     <section>
                         <h1>History of Computer Vision</h1>
+
+                        <div style="float: left; width: 30%"><img src="images/minsky.obitx299.jpg">Marvin Minsky</div>
+                        <div style="float: right; width: 65%; margin: 10pt">
+                            <span style="font-size: smaller;">
+                                In 1966, it was believed that this [Computer Vision] could be achieved through a summer project, by attaching a camera to a computer and having it "describe what it saw"
+                            </span>
+                            <br>
+
+                            <span style="font-size: x-large; font-style: italic;">
+                                Papert, Seymour (1966-07-01). "The Summer Vision Project". MIT AI Memos (1959 - 2004).
+                            </span>
+                        </div>
+
                     </section>
                     <section>
                         <h1>1960s: The Beginning</h1>
+                        <ul>
+                            <li>Begin at universities</li>
+                            <li>It was meant to mimic the human vision system</li>
+                            <li>It was believed that CV could be achieved by simple rules</li>
+                        </ul>
                     </section>
                     <section>
                         <h1>1970s: Foundation</h1>
+                        <ul>
+                            <li>Edge detection</li>
+                            <li>Line detection</li>
+                            <li>Optical Flow and Motion Estimation</li>
+                        </ul>
                     </section>
                     <section>
                         <h1>Lenna</h1>
-                        <img src="images/440px-Lenna_(test_image).png">
+                        <img src="images/440px-Lenna_(test_image).png"><br>
+                        November 1972 issue of Playboy magazine
                     </section>
                     <section>
                         <h1>1980s: Getting Mathy</h1>
+                        <ul>
+                            <li>Mathematical analysis</li>
+                            <li>Shapes extraction</li>
+                            <li>Contour models</li>
+                        </ul>
                     </section>
                     <section>
                         <h1>1990s: Going 3D</h1>
+                        <ul>
+                            <li>Projective 3D reconstruction</li>
+                            <li>First attempts on Object Segmentation</li>
+                            <li>Eigenface</li>
+                        </ul>
                     </section>
                     <section>
                         <h1>2000s: Object Detection</h1>
+                        <h2>SIFT</h2>
+                        <img src="images/SIFT-descriptor-The-well-known-SIFT-descriptor-consists-of-3D-histograms-of-image.png">
+                    </section>
+                    <section>
+                        <h1>2000s: Object Detection</h1>
+                        <h2>HOG (1986 -> 1994)</h2>
+                        <img src="images/plot_hog_1.png">
+                    </section>
+                    <section>
+                        <h1>2000s: Object Detection</h1>
+                        <h2>Sliding Window Object Detection</h2>
+                        <img src="images/Object-detection-by-sliding-window-approach.png">
                     </section>
                     <section>
                         <h1>2010s: Deep Learning</h1>
+                        <img src="images/alex_net.png"><br>
+                        AlexNet is the name of a convolutional neural network (CNN), designed by Alex Krizhevsky in 2012, and published with Ilya Sutskever and Krizhevsky's doctoral advisor Geoffrey Hinton. The architecture won an ImageNet competition. (<a href="https://en.wikipedia.org/wiki/AlexNet">wiki</a>)
                     </section>
                     <section>
                         <h1>Nowadays</h1>
+                        <img src="images/1_ZD3ewOfpfsMAjhp4MYFnog.png">
                     </section>
                 </section>
 
@@ -358,29 +434,41 @@
                     </section>
 
                     <section>
+                        <h1>Amazon Go</h1>
+                        <img class="stretch" src="images/amazon-go-badge.png">
+                    </section>
+
+                    <section>
                         <h1>Tesla Autopilot</h1>
                         <img class="stretch" src="images/tesla.png">
                         <a target="_blank" href="https://www.tesla.com/autopilot?redirect=no">Video</a>
                     </section>
 
-                    <section>
-                        <h1>Amazon Go</h1>
-                        <img class="stretch" src="images/amazon-go-badge.png">
-                    </section>
-
-
                 </section>
 
                 <section>
-                    A Gentle Introduction to Computer Vision
-                    Huge Presentation
-                    Wikipedia: Computer Vision
-                    Wikipedia: Outline of Computer Vision
-                    Computer Vision: Overview of a Cutting Edge AI Technology
+                    <h1>What to read</h1>
+                    <ol>
+                        <li><a href="https://machinelearningmastery.com/what-is-computer-vision/">A Gentle Introduction to Computer Vision</a></li>
+                        <li><a href="https://edisciplinas.usp.br/pluginfile.php/657757/mod_resource/content/0/overviewComputerVision.pdf">Huge Presentation</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Computer_vision">Wikipedia: Computer Vision</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Outline_of_computer_vision">Wikipedia: Outline of Computer Vision</a></li>
+                        <li><a href="https://dzone.com/articles/computer-vision-overview-of-an-ai-cutting-edge-tec">Computer Vision: Overview of a Cutting Edge AI Technology</a></li>
+                    </ol>
+                </section>
+
+                <section><h1>And what if I wan to study?</h1>
+                    <ul>
+                        <li><a href="http://www.computervisionmodels.com/">Computer Vision Models Book</a></li>
+                        <li><a href="http://www.amazon.com/Digital-Image-Processing-3rd-Edition/dp/013168728X">Digital Image Processing: Rafael C. Gonzalez</a></li>
+                        <li><a href="http://cs231n.stanford.edu/">Stanford University CS231n: Convolutional Neural Networks for Visual Recognition</a></li>
+                    </ul>
                 </section>
 
                 <section>
                     <h1>Cheers!</h1>
+                    <hr>
+                    <img src="images/qr_link.png">
                 </section>
 
 			</div>
